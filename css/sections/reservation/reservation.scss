@@ -1,0 +1,121 @@
+.reservation{
+
+	.container{
+		padding-top: rem(50px);
+		padding-bottom: rem(50px);
+		@include laptop{
+			flex-direction: column;
+		}
+	}
+}
+
+
+.reservation__left-side{
+	flex: 2 1 rem(650px);
+
+	.title{
+		margin-bottom: rem(25px);
+	}
+}
+
+
+.reservation__info{
+	@extend %display-flex;
+
+	@include tablet{
+		flex-direction: column;
+	}
+}
+
+.reservation__text{
+
+	@include tablet{
+		margin-top: rem(30px);
+	}
+}
+
+.reservation__img{
+	margin-right: rem(30px);
+}
+
+.reservation__usefull-information{
+
+	.text:nth-of-type(4){
+		margin-bottom: rem(30px);
+	}
+
+	.button{
+		display: inline-block;
+	}
+}
+
+
+.reservation__right-side{
+	flex: 1 1 rem(350px);
+	padding: 0 rem(30px) rem(30px);
+
+	@include laptop{
+		padding: 0;
+		margin-top: rem(30px);
+	}
+}
+
+.reservation__form{
+	font-family: OpenSans, sans-serif;
+}
+
+.reservation_name, .reservation_email, .reservation_date, .reservation__age, .reservation__option, .reservation__textarea{
+	margin-bottom: rem(10px);
+}
+
+.reservation_name, .reservation_email, .reservation__textarea{
+	width: 100%;
+	padding: rem(5px);
+
+	@include laptop{
+		width: 50%;
+		}
+
+		@include phone{
+		width: 100%;
+		}
+}
+
+.reservation_label-date{
+	display: block;
+}
+
+.reservation_date{
+	margin-left: rem(30px);
+	width: 10rem;
+}
+
+.reservation_label-children{
+	margin-left: rem(30px);
+}
+
+.reservation__textarea{
+	height: rem(150px);
+	resize: none;
+}
+
+
+
+.reset, .submit{
+	background: none;
+	border: none;
+	outline: none;
+}
+
+.reset, .submit{
+	font-size: rem(20px);
+	border: 1px solid #727171;;
+	padding: rem(7px) rem(26px);
+	color: #727171;
+	text-align: center;
+	transition: 0.3s;
+	&:hover{
+		border-color: #aeceae;
+		color: #aeceae;
+	}
+}

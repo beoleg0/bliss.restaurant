@@ -1,0 +1,45 @@
+.header{
+	padding-top: rem(28px);
+	background-color: #f1f0f1;
+}
+
+.logo{
+	width: rem(270px);
+	height: rem(115px);
+	background-color: #2e2d2d;
+	color: #fff;
+	@extend %display-flex;
+	@extend %justify-content_center;
+	@extend %align-items_center;
+}
+
+.logo .logo__main-text{
+	font-family: BebasNeue, sans-serif;
+	text-transform: uppercase;
+	font-size: rem(48px);
+	padding-right: rem(25px);
+	border-right: 1px solid #4c4b4b;
+}
+
+.logo .logo__tagline{
+	font-size: rem(20px);
+	padding-left: rem(14px);
+}
+
+.touch-menu{
+	display: none;
+}
+
+.menu{
+	@extend %display-flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.menu .menu__item{
+	list-style-type: none;
+	margin-left: rem(45px);
+}

@@ -1,0 +1,15 @@
+.last-post-block .container{
+	@extend %display-flex;
+	justify-content: space-between;
+	background-color: #f1f0f1;
+	padding: rem(50px) rem(80px);
+	box-sizing: border-box;
+}
+
+.last-post-block .card_big{
+	align-items: flex-start;
+}
+
+.last-post-block .card_big:nth-child(2){
+	justify-content: space-between;
+}

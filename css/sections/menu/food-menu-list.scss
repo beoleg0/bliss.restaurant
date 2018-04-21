@@ -1,0 +1,61 @@
+.menu-food-list{
+
+	.card{
+		background: #f1f0f1;
+
+		@include desktop{
+			flex-basis: 30%;
+		}
+
+	}
+
+	.text{
+		margin-bottom: rem(30px);
+	}
+
+	.text_large{
+		margin-top: 0;
+	}
+}
+
+.menu-food-list__group{
+	margin-left: -1.1rem;
+	padding: rem(50px) 0;
+	@extend %display-flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+	@include desktop{
+		justify-content: center;
+	}
+
+	@include phone{
+		margin-left: 0;
+	}
+
+}
+
+.menu-food-list__item{
+	margin-bottom: 0.7rem;
+	margin-left: 1.1rem;
+
+	&:last-child{
+		@include desktop{
+			margin-bottom: 0;
+		}
+	}
+
+	@include phone{
+		margin-left: 0;
+	}
+
+}
+.menu-food-list__desc{
+	@extend %display-flex;
+	align-items: flex-start;
+	flex-direction: column;
+	max-width: rem(300px);
+	margin: rem(30px) 0 rem(30px) rem(20px);
+}
+
+

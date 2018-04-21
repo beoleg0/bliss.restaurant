@@ -1,0 +1,233 @@
+$body-font: Economica, sans-serif;
+
+@import "_misc/_normalize";
+@import "_misc/_font-awesome";
+@import "_misc/_mixins";
+@import "_misc/_fonts";
+@import "_misc/_adjustment";
+
+body, a{
+	color: #727171;
+}
+
+section{
+	margin: rem(50px) 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+/* container */
+
+.wrap{
+	@extend %display-flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.container{
+	max-width: 1170px;
+	margin: 0 auto;
+	@extend %display-flex;
+	justify-content: space-between;
+	padding: 0 rem(8px);
+}
+
+.container_align-center{
+	@extend %align-items_center;
+}
+
+/* card */
+
+.card{
+	flex-basis: 32%;
+	@extend %display-flex;
+	flex-direction: column;
+}
+
+.card_big{
+	flex-basis: 49%;
+	@extend %display-flex;
+	flex-direction: column;
+}
+
+.card_row{
+	flex-direction: row;
+}
+
+/* link */
+
+.link{
+	font-size: rem(20px);
+	transition: .3s;
+}
+
+.link:hover{
+	color: #aeceae;
+}
+
+.link-selected{
+	color: #aeceae;
+}
+
+/* button */
+
+.button{
+	display: block;
+	font-size: rem(20px);
+	border: 1px solid #727171;;
+	padding: rem(5px) rem(26px);
+	text-align: center;
+	transition: .3s;
+
+	&:hover{
+		border-color: #aeceae;
+		color: #aeceae;
+	}
+}
+
+/* button-plus */
+
+.button-plus{
+	height: rem(36px);	
+	width: rem(36px);
+	border: 0;
+	outline: 0;
+	background:#000;
+	font-family: OpenSans, sans-serif;
+	font-size: rem(24px);
+	font-weight: bold;
+	color: #ffffff;
+	transition: all .3s;
+}
+
+.button-plus:hover{
+	background: #474545;
+}
+
+/* title */
+
+.title{
+	font-size: rem(36px);
+	color: #535151;
+}
+
+/* text */
+
+.text{
+	font-family: OpenSans, sans-serif;
+	font-size: rem(14px);
+}
+
+.text_large{
+	font-family: OpenSans, sans-serif;
+	font-size: rem(18px);
+}
+
+// layout
+@import "sections/header";
+@import "sections/home/food-card";
+@import "sections/home/reasons";
+@import "sections/home/last-post";
+@import "sections/home/dish-card";
+@import "sections/home/info-block";
+@import "sections/menu/food-menu-list";
+@import "sections/reservation/reservation";
+@import "sections/blog/blog";
+@import "sections/contacts/contacts";
+@import "sections/footer";
+
+
+/* media queryie */
+
+
+@media screen and (max-width:768px) {
+	.touch-menu{
+		display: block;
+		margin-right: rem(35px);
+	}
+
+	.menu{
+		display: none;
+	}
+
+	.info-block .container .card:nth-child(2){
+		display: none;
+	}
+
+	.info-block .container .card{
+		flex-basis: 45%
+	}
+
+	.info-block .container {
+		justify-content: space-around;
+	}
+
+	.footer .text{
+		margin-bottom: rem(25px);
+	}
+}
+
+@media screen and (max-width:425px) {
+	section{
+		margin: rem(35px) 0;
+	}
+
+	.container{
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+
+	.header	.container {
+		-webkit-flex-direction: row;
+		-moz-flex-direction: row;
+		-ms-flex-direction: row;
+		-o-flex-direction: row;
+		flex-direction: row;
+	}
+
+	.logo {
+		width: auto;
+		background: none;
+	}
+
+	.logo .logo__main-text {
+		color:#2e2d2d;
+		padding: 0;
+		border: none;
+	}
+
+	.logo__tagline {
+		display: none;
+	}
+
+	.card, .card_big {
+		margin-top: rem(35px);
+		flex-basis: 100%;
+	}
+
+	.container .card:nth-child(1){
+		margin: 0;
+	}
+
+	.food-card-block__information{
+		height: 19.5rem;
+	}
+
+	.food-card-block__information_blue{
+		order: 1;
+	}
+
+	.info-block .container .card:nth-child(2){
+		display: flex;
+	}
+
+	.last-post-block .container{
+		padding: 0 rem(8px) rem(35px);
+	}
+}

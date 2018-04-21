@@ -1,0 +1,23 @@
+.reason-block .card{
+	@extend %align-items_center;
+}
+
+.reason-block__section{
+	text-align: center;
+}
+
+.reason-block__number-icon{
+	@extend %display-flex;
+	@extend %justify-content_center;
+	@extend %align-items_center;
+	height: rem(120px);
+	width: rem(120px);
+	border: 1px solid #727171;
+	border-radius: 50%;
+	font-family: Dosis, serif;
+	font-size: rem(40px);
+}
+
+.reason-block .text{
+	margin: rem(25px) 0;
+}

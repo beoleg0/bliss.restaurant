@@ -1,0 +1,60 @@
+.food-card-block .food-card-block__image{
+	display: block;
+	width: 100%;
+	order: 1;
+}
+
+.food-card-block__information{
+	@extend %display-flex;
+	min-height: 17rem;
+	background-color: #aad4b3;
+	@extend %justify-content_center;
+	order: 2;
+}
+
+
+.food-card-block__information_blue{
+	background-color: #86cdd7;
+	order: 0;
+}
+
+.food-card-block__information_yellow{
+	background-color: #ffe5b9;
+}
+
+.food-card-block__content{
+	margin: 1rem 0;
+	max-width: rem(195px);
+	text-align: center;
+}
+
+.food-card-block__icon{
+	width: 70px;
+	height: 70px;
+	background: url(../img/food-block/food-icon.png) -100px -16px no-repeat;
+	display: inline-block;
+}
+
+.food-card-block__information_blue .food-card-block__icon{
+	background-position: -18px -16px;
+}
+
+.food-card-block__information_yellow .food-card-block__icon{
+	background-position: -179px -16px;
+}
+
+.food-card-block__content .title{
+	color: #fff;
+	border-bottom: 3px dashed #fff;
+	padding-bottom: rem(25px);
+}
+
+.food-card-block__content .link{
+	display: block;
+	margin-top: rem(25px);
+	color: #fff;
+}
+
+.food-card-block__content .link:hover{
+	opacity: .6;
+}
