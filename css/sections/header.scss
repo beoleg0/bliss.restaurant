@@ -43,3 +43,20 @@
 	list-style-type: none;
 	margin-left: rem(45px);
 }
+
+.menu-burger{
+	text-align: center;
+	background: #f1f0f1;
+	display: none;
+	.link{
+		display: block;
+		padding: rem(15px) 0;
+		&:hover{
+			background: lighten(#f1f0f1, 10%);
+		}
+	}
+}
+
+.menu-burger_opened{
+	display: block;
+}
